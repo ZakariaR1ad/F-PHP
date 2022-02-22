@@ -1,7 +1,7 @@
 <?php      
     $host = "localhost";  
     $user = "root";  
-    $password = 'zakizaki';  
+    $password = 'insert_ur_password_here';  
     $db_name = "sqlin";  
       
     $con = mysqli_connect($host, $user, $password, $db_name);  
