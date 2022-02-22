@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$pdo = new PDO("mysql:host=localhost;dbname=sqlin","root","zakizaki");
+$pdo = new PDO("mysql:host=localhost;dbname=sqlin","root","insert_ur_password_here");
 
 $flag = $_REQUEST["flag"];
 
