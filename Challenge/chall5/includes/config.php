@@ -2,7 +2,7 @@
 // DB credentials.
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','zakizaki');
+define('DB_PASS','insert_ur_password_here');
 define('DB_NAME','sqlin');
 // Establish database connection.
 try
