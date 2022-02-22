@@ -1,0 +1,148 @@
+body{
+    background-image: url("../img/340618.png");
+    background-size: cover;
+    transition-timing-function: ea;
+    padding: 0;
+    margin: 0;
+}
+
+.AboutSection{
+    color: white;
+    text-align: center;
+    font-size: larger;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    
+}
+.RulesSection{
+    color: white;
+    text-align: center;
+    font-size: larger;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    word-wrap: normal;
+}
+.Menu{
+    overflow: hidden;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    /* height: 100%; */
+    background-color: #0D1520;
+
+
+}
+.Menu li{
+    margin: 20px;
+    font-size: larger;
+    font-weight: 700;
+    font-family: questrial,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: green;
+}
+.Menu li a{
+    color: green;
+    text-decoration: none;
+}
+.Menu li:first-child{
+    position: fixed;
+    left: 3px;
+    color: white;
+    font-size: large;
+}
+
+
+
+.FlagsBar{
+    margin-top: 100px;
+    text-align: center;
+}
+.FlagsBar form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.FlagsBar form button{
+    height: 50px;
+    width: 10%;
+    font-size: large;
+    margin: 5px;
+}
+.FlagsBar form input{
+    height: 45px;
+    width: 40%;
+}
+
+.challengeContainer{
+    display: flex;
+    /* background-color: aliceblue; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.challengeBox{
+    background-color: #0d1820;
+    height: 250px;
+    width: 250px;
+    margin: 5%;
+    box-shadow: #0D1520 1px;
+    text-align: center;
+
+
+}
+.challengeBox h3{
+    color: white;
+}
+.challengeBox p{
+    color: #2a384d;
+}
+.challengeBox button{
+    background-color: #2a384d;
+    box-shadow: none;
+    border: none;
+    padding: 5px 10px 5px;
+}
+.challengeBox button a{
+    text-align: center;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+
+}
+footer{
+    background-color: #0D1520;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding: auto;
+    padding-top: 25px;
+}
+footer a {
+    text-align: center;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+.Footer{
+    position: relative;
+}
+.OtherFooter{
+    position: fixed;
+}

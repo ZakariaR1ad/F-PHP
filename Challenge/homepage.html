@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./css/home.css" rel="stylesheet">
+        <script src="./js/reset.js"></script>
+    </head>
+    <body>
+        
+        
+        
+        
+            <ul class="Menu">
+                <li><a href="./homepage.html"><img src="../img/1.png" alt="LOGO" id="LogoImg" width="100px" height="100px"></a></li>
+                <li <button onclick="reset()">Reset</button></li>
+                <li><a href="./Rules.html">Rules</a></li>
+                <li><a href="./About.html">About</a></li>
+            </ul>
+        
+        <div class="FlagsBar">
+           
+            <form action="" method="post">
+                <input name="flag" id= "flag" placeholder="FPHP{TH15_1S_4_Dummy_Fl4g}">
+                <button onclick="sendRequest()" >Submit</button>
+            </form>
+
+        </div>
+            
+            
+        <div class="challengeContainer">
+           
+            <div class="challengeBox" id="6">
+                
+
+                <h3>SQLi</h3>
+                <p>I implemented a login system to secure sensible informations...I bet you can't bypass it</p>
+                <button><a href="./Chall1/template/index.html">link</a></button>
+            </div>
+            <div class="challengeBox"  id="5">
+                <h3> Linux is better than  windows </h3>
+                <p>Linux is an open source operating system whereas Windows OS is commercial. Linux has access to source code and alters the code as per user need whereas Windows does not have access to the source code.</p>
+                <button><a href="./chall2/chall1.php">link</a></button>
+            </div>
+            <div class="challengeBox"  id="4">
+                <h3>GLOBal security issues </h3>
+                <p>normal people use things for their intended purposes but hackers use them for the unintended purposes</p>
+                <button><a href="./chall4/chall4.php">link</a></button>
+            </div>
+            <div class="challengeBox"  id="3">
+                <h3>warmup</h3>
+                <p>After putting the plan & applying your knowledge, the first step is to outsmart different tactics!
+                    Train, and get your hands dirty doing a warmup.</p>
+                <button><a href="./chall3/warmup.php">link</a></button>
+            </div>
+            <div class="challengeBox"  id="2">
+                <h3>jail</h3>
+                <p>How did you escape? Easily. 
+                    Did you bring your heaps of knowledge this time? must be good at running with weights and finding backdoors.</p>
+                <button><a href="./chall3/jail.php">link</a></button>
+            </div>
+            <div class="challengeBox"  id="1">
+                <h3>SQL Injection</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In dolorem voluptatum error corporis sunt itaque est? Corporis maxime sed facere minus laboriosam accusamus odit, sunt quia. Quasi eos inventore numquam.</p>
+                <button><a href="./chall5/index.php">link</a></button>
+            </div>
+                      
+            
+        </div>
+        <script>
+            for(var i = 0; i<7;i++){
+                if(sessionStorage.getItem(i) == "true"){
+                    var div = document.getElementById(i.toString());
+                    div.style.backgroundColor = "green";
+                }
+                
+            }
+            function sendRequest(){
+
+                var str = document.getElementById("flag").value;
+
+                if (str.length == 0) {
+                    alert("Flag cannot be empty");
+                    return;
+                }
+            
+             else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var response = this.responseText;
+                        if(isNaN(response)){
+                            alert("wrong flag");
+                            sessionStorage.setItem(response,false);
+
+                        }
+                        else{
+                            var div = document.getElementById(response);
+                            sessionStorage.setItem(response,true);
+                            div.style.backgroundColor = "green";
+                            return;                        
+                        }
+                    }
+                    
+                    };
+                    xmlhttp.open("POST", "./action/fetch.php?flag=" + str, true);
+                    xmlhttp.send();
+                }
+            }
+
+        </script>
+        <footer class="Footer">
+            &#169;OctaC0re+ 
+            <br>
+            vist our website <a href="https://ctftime.org/team/141485"> https://ctftime.org/team/141485 </a>
+        </footer>
+    </body>
+</html>
